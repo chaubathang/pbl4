@@ -13,6 +13,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+          <script src="login.js" defer></script>
     <script>
         window.onscroll = function () {
             scrollFunction(),
@@ -41,6 +42,7 @@
                 $(".input_search").toggle("slow");
             });
         })
+        
     </script>
 </head>
 <body>
@@ -60,10 +62,19 @@
                 </div>
 
             </div>
-            <div class="bar__user">
-                <div class="bar__user-login"><a href="./login.html">login</a></div>
-                <div class="bar__user-regis"><a href="./register.html">register</a></div>
+            <div class="bar__user" id="user-bar">
+                <div class="bar__user-login"><a href="./login.html"  style="cursor:pointer;">Login</a></div>
+                <div class="bar__user-regis"><a href="./register.html "  style="cursor:pointer;">Register</a></div>
+                <img id="avatar" src="styles/images/about_slide.jpg"  style="display:none;" />
+                <div id="user-info" style="display:none;">
+                    <p id="user-name">Name: </p>
+                    <p id="user-email">Email: </p>
+                    <button id="logout-button">Logout</button>
+                </div>
             </div>
+            
+            
+            
         </div>
 
         <div class="main_nav">
@@ -866,6 +877,7 @@
 
 </body>
 <script src="styles/js/main_js.js"></script>
+
 <script>
 
     $("#single_item").slick({

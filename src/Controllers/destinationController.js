@@ -1,7 +1,7 @@
-const Destination = require('../models/Destination');
+import Destination from '../models/Destination.js';
 
 // Tạo điểm du lịch mới
-exports.createDestination = async (req, res) => {
+export const createDestination = async (req, res) => {
     try {
         const destination = new Destination(req.body);
         await destination.save();
@@ -12,7 +12,7 @@ exports.createDestination = async (req, res) => {
 };
 
 // Lấy danh sách điểm du lịch
-exports.getDestinations = async (req, res) => {
+export const getDestinations = async (req, res) => {
     try {
         const destinations = await Destination.find();
         res.json(destinations);

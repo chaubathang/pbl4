@@ -1,9 +1,10 @@
-const express = require('express');
+import express from 'express';
+import { createDestination, getDestinations } from '../controllers/destinationController.js'; // Đường dẫn đến file destinationController.js
+
 const router = express.Router();
-const destinationController = require('../controllers/destinationController');
 
 // Định nghĩa các route cho điểm du lịch
-router.post('/', destinationController.createDestination);
-router.get('/', destinationController.getDestinations);
+router.post('/', createDestination);
+router.get('/', getDestinations);
 
-module.exports = router;
+export default router;

@@ -1,7 +1,10 @@
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const User = require('../src/models/User'); 
-const Destination = require('../src/models/Destination');
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import User from '../src/models/User'; 
+import Destination from '../src/models/Destination';
+
+// Gọi dotenv.config() để load biến môi trường
+dotenv.config();
 
 const seedDatabase = async () => {
     const uri = process.env.MONGODB_URI;
@@ -13,6 +16,7 @@ const seedDatabase = async () => {
 
     try {
         await mongoose.connect(uri, {
+            // @ts-ignore
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
@@ -26,14 +30,7 @@ const seedDatabase = async () => {
             password: 'admin123',
         });
 
-        const destination = new Destination({
-            name: 'Bà Nà Hills',
-            description: 'Núi Bà Nà nằm ở Đà Nẵng',
-            location: 'Đà Nẵng, Việt Nam',
-        });
-
         await user.save();
-        await destination.save();
 
         console.log('Database seeded!');
     } catch (err) {

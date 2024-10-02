@@ -1,6 +1,6 @@
-const request = require('supertest');
-const app = require('../../src/server'); // Đường dẫn đến file app.js
-const User = require('../../src/models/User');
+import request from 'supertest';
+import app from '../../src/server.js'; // Đường dẫn đến file server.js
+import User from '../../src/models/User.js';
 
 describe('User Controller', () => {
     afterEach(async () => {

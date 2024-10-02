@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const GuideSchema = new mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true }, // Khóa chính
@@ -8,4 +8,4 @@ const GuideSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Guide', GuideSchema);
+export default mongoose.model('Guide', GuideSchema);

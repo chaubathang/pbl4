@@ -1,5 +1,8 @@
-const mongoose = require('mongoose');
-require('dotenv').config();
+import mongoose from 'mongoose';
+// @ts-ignore
+import dotenv from 'dotenv';
+
+dotenv.config(); // Nạp các biến môi trường từ tệp .env
 
 const connectDB = async () => {
     const uri = process.env.MONGODB_URI;
@@ -11,8 +14,8 @@ const connectDB = async () => {
 
     try {
         await mongoose.connect(uri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+            // @ts-ignore
+            // Các tùy chọn đã bị ngừng hỗ trợ, bạn có thể loại bỏ
         });
         console.log('MongoDB Connected');
     } catch (err) {
@@ -21,5 +24,4 @@ const connectDB = async () => {
     }
 };
 
-module.exports = connectDB;
-
+export default connectDB; // Xuất mặc định

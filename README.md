@@ -131,3 +131,57 @@ git status
 git add .
 git commit -m "Ghi chú gì tuỳ"
 git push
+//////
+[User.js
+_id: Khóa chính tự động sinh.
+username: Tên người dùng, bắt buộc và phải duy nhất trong hệ thống.
+email: Địa chỉ email của người dùng, cũng bắt buộc và phải duy nhất.
+password: Mật khẩu cho tài khoản người dùng.
+createdAt: Ngày giờ tạo tài khoản, mặc định sẽ là thời gian hiện tại.
+]
+[Review.js
+_id: Khóa chính tự động sinh.
+userId: ID của người dùng đã tạo đánh giá (tham chiếu đến mô hình User).
+destinationId: ID của điểm du lịch mà người dùng đánh giá (tham chiếu đến mô hình Destination).
+rating: Đánh giá của người dùng, bắt buộc từ 1 đến 5.
+comment: Nội dung bình luận của người dùng.
+createdAt: Ngày giờ tạo đánh giá, mặc định sẽ là thời gian hiện tại.
+]
+[Promotion.js
+_id: Khóa chính tự động sinh.
+title: Tiêu đề của chương trình khuyến mãi, bắt buộc.
+description: Mô tả chi tiết về chương trình khuyến mãi.
+startDate: Ngày bắt đầu của khuyến mãi.
+endDate: Ngày kết thúc của khuyến mãi.
+createdAt: Ngày giờ tạo khuyến mãi, mặc định là thời gian hiện tại.
+]
+[Guide.js
+_id: Khóa chính tự động sinh.
+name: Tên của người hướng dẫn, bắt buộc.
+experience: Kinh nghiệm làm việc của người hướng dẫn.
+languages: Danh sách các ngôn ngữ mà người hướng dẫn có thể nói.
+createdAt: Ngày giờ tạo thông tin hướng dẫn, mặc định là thời gian hiện tại.
+]
+[Destination.js
+_id: Khóa chính tự động sinh.
+name: Tên của điểm du lịch, bắt buộc và phải duy nhất.
+description: Mô tả chi tiết về điểm du lịch.
+location: Vị trí hoặc địa chỉ của điểm du lịch.
+images: Danh sách các URL hình ảnh của điểm du lịch.
+createdAt: Ngày giờ tạo thông tin điểm du lịch, mặc định là thời gian hiện tại.
+]
+[Booking.js
+_id: Khóa chính tự động sinh.
+userId: ID của người dùng đã thực hiện đặt chỗ (tham chiếu đến mô hình User).
+activityId: ID của hoạt động đã đặt (tham chiếu đến mô hình Activity).
+bookingDate: Ngày giờ thực hiện đặt chỗ, mặc định là thời gian hiện tại.
+numberOfPeople: Số lượng người tham gia hoạt động, bắt buộc.
+createdAt: Ngày giờ tạo thông tin đặt chỗ, mặc định là thời gian hiện tại.
+]
+[Activity.js
+_id: Khóa chính tự động sinh.
+name: Tên của hoạt động, bắt buộc và phải duy nhất.
+description: Mô tả chi tiết về hoạt động.
+destinationId: ID của điểm đến mà hoạt động này thuộc về (tham chiếu đến mô hình Destination).
+createdAt: Ngày giờ tạo thông tin hoạt động, mặc định là thời gian hiện tại.
+]

@@ -1,5 +1,5 @@
-const request = require('supertest');
-const app = require('../../src/server'); // Đường dẫn đến file app.js
+import request from 'supertest';
+import app from '../../src/server.js'; // Đường dẫn đến file server.js
 
 describe('User Routes', () => {
     test('POST /api/users', async () => {

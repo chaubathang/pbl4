@@ -1,39 +1,101 @@
-.login-container {
-  height: 100vh;
-  background-size: cover;
-  background-position: center; 
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Đặt font và kích thước mặc định */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.login-container .aside-right {
-  width: 400px;
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.9); 
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.login-container .aside-right .header h3 {
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(50, 50, 50);
-  text-align: center;
-  margin-top: 0;
-  font-weight: 300;
+.aside-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.login-container .input-name-wrapper {
+.header h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  width: 100%;
+}
+
+.input-wrapper {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+.form-action {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.login-container .input-name-wrapper .input-wrapper {
-  width: 48%;
+.cursor {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-#login-form {
-  padding: 20px;
+.cursor:hover {
+  text-decoration: underline;
+}
+
+button.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.btn:hover {
+  background-color: #0056b3;
 }

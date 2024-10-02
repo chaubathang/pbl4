@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const BookingSchema = new mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true }, // Khóa chính
@@ -9,4 +9,4 @@ const BookingSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Booking', BookingSchema);
+export default mongoose.model('Booking', BookingSchema);

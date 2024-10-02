@@ -1,37 +1,129 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Đặt font và kích thước mặc định */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .register-container {
-    height: 100vh;
-    background-image: url();
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    
-  }
-  
-  .register-container .aside-right {
-    width: 28%;
-    height: 100vh;
-    background-color: #fff;
-  }
-  
-  .register-container .aside-right .header h3 {
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* color: rgb(128, 120, 120); */
-    /* text-align: center; */
-    margin-top: 30px;
-    font-weight: 200;
-  }
-  
-  .register-container .input-name-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .register-container .input-name-wrapper .input-wrapper {
-    width: 48%;
-  }
-  
-  
-  #register-form {
-    padding: 20px;
-  }
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.aside-left {
+  flex: 1;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.aside-right {
+  flex: 2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 100%;
+}
+
+.input-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+.form-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cursor {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cursor:hover {
+  text-decoration: underline;
+}
+
+button.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.btn:hover {
+  background-color: #0056b3;
+}
+#loading-message {
+  color: orange; /* Màu chữ */
+  font-weight: bold; /* Chữ đậm */
+  margin-top: 10px; /* Khoảng cách phía trên */
+}
